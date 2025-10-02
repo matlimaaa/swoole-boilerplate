@@ -1,0 +1,8 @@
+services:
+  swoole:
+    build: .
+    container_name: swoole-server
+    volumes:
+      - ./app:/var/www
+    ports:
+      - "9501:9501"
