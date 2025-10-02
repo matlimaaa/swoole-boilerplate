@@ -1,11 +1,9 @@
-FROM php:8.2-cli
-
-RUN apt-get update && apt-get install -y \
-    git zip unzip curl wget libssl-dev pkg-config libpq-dev libzip-dev \
-    && docker-php-ext-install pdo pdo_mysql
-
-# Instala Swoole
-RUN pecl install swoole \
-    && docker-php-ext-enable swoole
+FROM phpswoole/swoole:4.8-alpine
 
 WORKDIR /var/www
+
+COPY . .
+
+EXPOSE 9501
+
+CMD ["php", "./01-http-basic/server.php"]
