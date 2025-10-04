@@ -6,4 +6,4 @@ COPY . .
 
 EXPOSE 9501
 
-CMD ["php", "./01-http-basic/server.php"]
+CMD ["php", "./02-http-routes/server.php"]
