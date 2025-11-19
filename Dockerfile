@@ -6,4 +6,4 @@ COPY . .
 
 EXPOSE 9501
 
-CMD ["php", "./04-parallel-coroutines/server.php"]
+CMD ["php", "./05-channel/server-b.php"]
